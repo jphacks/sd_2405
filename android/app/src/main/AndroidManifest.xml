@@ -14,6 +14,7 @@
     </queries>
 
     <application
+        android:enableOnBackInvokedCallback="true"
         android:label="Speak Chat"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -43,5 +44,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        
+        
     </application>
 </manifest>

@@ -585,7 +585,16 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
 
         title: Text(widget.title),
-        actions: [
+          actions: [
+          IconButton(
+            icon: const Icon(Icons.list),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ListPage()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
@@ -600,29 +609,6 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: _exitAppWithAi, // このメソッドをボタンにセット
           ),
         ],
-
-          title: Text(widget.title),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.list),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ListPage()),
-                );
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SettingView()),
-                );
-              },
-            ),
-          ],
-
       ),
       body: Column(
         children: <Widget>[
@@ -716,6 +702,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 
 class SpeechDialog extends StatefulWidget {
   const SpeechDialog({Key? key}) : super(key: key);
