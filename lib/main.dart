@@ -136,7 +136,7 @@ class _SettingViewState extends State<SettingView> {
               onChanged: (String? value) {
                 setState(() {
                   _selectedItemBot = value!;
-                  _changeVoice(_selectedItemBot, "ロボット", true);
+                  _changeVoice(_selectedItemBot, "OTA ボット", true);
                 });
               },
             ),
@@ -332,9 +332,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // 停止して再生
     await tts.stop();
     await tts.setVoice({'name': _getVoiceName("user"), 'locale': 'ja-JP'});
-    await tts.speak(
-      lastWords
-    );
+    // ユーザーのチャットを音声出力
+    // await tts.speak(
+    //   lastWords
+    // );
     
 
 
@@ -367,8 +368,22 @@ class _MyHomePageState extends State<MyHomePage> {
     String body = json.encode({
       "frequency_penalty": 0,
       "max_tokens": 512,
-      "messages": chatMessagesClone,
-      "model": "gpt-3.5-turbo",
+      "messages":[
+        {
+          "role": "system",
+          "content": """
+          あなたは簡単な日常会話を通じて家の食品や日用品の在庫管理データベースの管理を手助けする役割です。自然な会話の中で、今日は何を買ったの？とか以下のリストデータで管理されている今家にあるものについて「これはもうなくなった？」みたいな質問をしてください。
+          後ほどその会話データからデータベースの編集を行うので、何が買われたとか何個買ったとかをしつこくならないようにしながら、何を買って、リストにあるもので何がなくなったかを自然に聞き出してください。
+
+          期待される行動例:
+          1. まず、「今日は何か買いましたか？」と聞いてみる。
+                    そうして「今日は歯ブラシを買い替えました」みたいな出力を期待しながら、会話を続ける。
+          2. 会話でストレスを与えないようにしましょう。同じ質問を3度以上繰り返したり、長すぎる返事は避けましょう。
+          """
+        },
+        ...chatMessagesClone // 他のユーザーメッセージやAIメッセージ
+      ],
+      "model": "ft:gpt-4o-mini-2024-07-18:lab:chatota-v2:9xWWBGSy",
       "presence_penalty": 0,
       "stream": true,
       "temperature": 0.7,
@@ -542,7 +557,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children:[
                             Text(
-                              item["role"] == "user" ? "わたし　：" : "ロボット：",
+                              item["role"] == "user" ? "わたし :" : "OTA bot :",
                               style: TextStyle(
                                 color: item["role"] == "user" ? Colors.blue : Colors.green, // テキストの色を青に設定
                               ),
