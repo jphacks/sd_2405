@@ -74,10 +74,10 @@
   
 ### 独自技術
 #### ハッカソンで開発した独自機能・技術
-* バックエンドのレポジトリ
-  [](https://github.com/jphacks/SD_2405_2)
-  APIの整備を丁寧にやることを試みました
-
 * 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください。
-  [フロント](https://github.com/jphacks/sd_2405/tree/dev)
-  表はFlutterで音声入力とfine tuningとうLLM周りの処理を作成した
+* バックエンドのレポジトリ
+  [github](https://github.com/jphacks/SD_2405_2)
+  APIの整備を丁寧にやることを試みました   
+
+*[フロント](https://github.com/jphacks/sd_2405/tree/dev)
+  Flutterで音声入力とfine tuning等のLLM周りの処理を作成した
