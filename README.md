@@ -77,7 +77,7 @@
 #### ハッカソンで開発した独自機能・技術
 * 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください。
 * バックエンドのレポジトリ(APIの整備を丁寧にやることを試みました)
-  [github](https://github.com/jphacks/SD_2405_2)   
+  [github_SD_2405_2](https://github.com/jphacks/SD_2405_2)   
 
 * フロントエンドのレポジトリ(Flutterで音声入力とfine tuning等のLLM周りの処理を作成した)
   [dev branch](https://github.com/jphacks/sd_2405/tree/dev)
