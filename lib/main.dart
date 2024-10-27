@@ -13,7 +13,12 @@ import 'package:audio_session/audio_session.dart';
 import 'package:logging/logging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
+
 import 'package:flutter/services.dart'; // アプリ終了用
+
+import 'screen/list_item.dart'; 
+
+
 
 final Logger _logger = Logger('MyApp');
 
@@ -578,6 +583,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text(widget.title),
         actions: [
           IconButton(
@@ -594,6 +600,29 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: _exitAppWithAi, // このメソッドをボタンにセット
           ),
         ],
+
+          title: Text(widget.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.list),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ListPage()),
+                );
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingView()),
+                );
+              },
+            ),
+          ],
+
       ),
       body: Column(
         children: <Widget>[
