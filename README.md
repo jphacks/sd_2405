@@ -67,6 +67,7 @@
 #### フレームワーク・ライブラリ・モジュール
 * Rails
 * Flutter
+* 音声入力　**https://github.com/belcrod5/Speak-Chat**
  
 #### デバイス
 * Android
