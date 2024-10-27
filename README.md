@@ -62,7 +62,7 @@
 ## 開発技術
 ### 活用した技術
 #### API・データ
-* OpenAI API （今回使用した fine tuningモデルは過去に作成した物）
+* OpenAI API
   
 #### フレームワーク・ライブラリ・モジュール
 * Rails
@@ -74,6 +74,10 @@
   
 ### 独自技術
 #### ハッカソンで開発した独自機能・技術
-* バックエンドのレポジトリはこちらをご覧ください
-  [Github](https://github.com/jphacks/SD_2405_2)
+* バックエンドのレポジトリ
+  [](https://github.com/jphacks/SD_2405_2)
+  APIの整備を丁寧にやることを試みました
+
 * 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください。
+  [フロント](https://github.com/jphacks/sd_2405/tree/dev)
+  表はFlutterで音声入力とfine tuningとうLLM周りの処理を作成した
