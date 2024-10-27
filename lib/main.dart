@@ -13,6 +13,7 @@ import 'package:audio_session/audio_session.dart';
 import 'package:logging/logging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
+import 'screen/list_item.dart'; 
 
 
 final Logger _logger = Logger('MyApp');
@@ -522,6 +523,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
           title: Text(widget.title),
           actions: [
+            IconButton(
+              icon: const Icon(Icons.list),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ListPage()),
+                );
+              },
+            ),
             IconButton(
               icon: const Icon(Icons.settings),
               onPressed: () {
