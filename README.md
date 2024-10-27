@@ -2,7 +2,7 @@
 ## 製品概要
 音声によるAIとの会話を通して、家にある食品や日用品を管理し、スマホアプリ上で存在の有無や賞味期限を確認するプロダクトです.
 
-##実際に作成したコードはこちらです  
+実際に作成したコードはこちらです  
 [dev branch](https://github.com/jphacks/sd_2405/tree/dev)  
 [github_SD_2405_2](https://github.com/jphacks/SD_2405_2)   
 
