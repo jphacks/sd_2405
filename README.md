@@ -17,6 +17,8 @@
 
 プロジェクト直下に .envファイルを用意してご自身のAPIキーを入力してください<br />
 `OPEN_AI_API_KEY={APIキー}`
+`SERVER_HOST={サーバーのホスト}`
+`SERVER_POST={サーバーのポート}`
 
 ## Setup
 
