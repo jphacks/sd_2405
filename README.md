@@ -1,5 +1,11 @@
 # RegiStock
 [Youtube](https://youtu.be/IBdxSJID7Ec)←簡単な紹介、デモ動画
+
+## 　メンバー
+- [りょ〜](https://github.com/ryo09020)
+- [もっちー](https://github.com/rmocchy)
+- [とーたす](https://github.com/kamei722)
+
 ## 製品概要
 音声によるAIとの会話を通して、家にある食品や日用品を管理し、スマホアプリ上で存在の有無や賞味期限を確認するプロダクトです.
  
